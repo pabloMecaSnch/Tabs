@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>notes</ion-title>
+    <ion-buttons slot='end'>
+      <button ion-button icon-only (click)="addNote()"><ion-icon name="add"></ion-icon></button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +12,7 @@
     <ion-item-sliding *ngFor="let note of notes">
 
       <ion-item>
-          {{note.title}}
+          {{note.texto}}
       </ion-item>
 
       <ion-item-options>

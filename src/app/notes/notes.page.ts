@@ -72,4 +72,31 @@ export class NotesPage implements OnInit {
     });
     await alert.present();
   }
+
+  async deleteNote(note : Note){
+    const alert = await this.alertCtrl.create({
+      header : 'Confirm!',
+      message: '<strong>¿Confirmar el borrado?</strong>',
+      buttons:[
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        },{
+            text : 'Okay',
+            handler : () =>{
+              console.log('Confirm Okay');
+              let index = this.notes.indexOf(note);
+              if(index >-1){
+                this.notes.splice(index,1);
+              }
+            }
+          }
+      ]
+    });
+    await alert.present();
+  }
 }
