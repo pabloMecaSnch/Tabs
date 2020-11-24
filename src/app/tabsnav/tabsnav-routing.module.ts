@@ -15,6 +15,10 @@ const routes: Routes = [
   {
   path: 'notes',
   loadChildren: () => import('../notes/notes.module').then(m => m.NotesPageModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: ()=> import('../contacts/contacts.module').then(m => m.ContactsPageModule)
   }
   ]
   },{
