@@ -1,7 +1,7 @@
 import { Component, DebugElement, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
-import { Console } from 'console';
+
 
 @Component({
   selector: 'app-contacts',
